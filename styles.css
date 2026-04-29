@@ -47,28 +47,26 @@ body {
   padding: 0 1.5rem;
 }
 
-/* ---------- Header ---------- */
+/* ---------- Header (FORRT dark navbar) ---------- */
 .site-header {
-  background: var(--cream);
-  border-bottom: 1px solid var(--border);
+  background: #343a40;
+  border-bottom: 1px solid #1d2124;
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(8px);
-  background-color: rgba(254, 253, 246, 0.92);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.85rem;
-  padding-bottom: 0.85rem;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
   gap: 1.5rem;
 }
 
 .brand img {
-  height: 42px;
+  height: 44px;
   width: auto;
   display: block;
 }
@@ -80,20 +78,20 @@ body {
 }
 
 .site-nav a {
-  color: var(--teal);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   padding: 0.25rem 0;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.15s ease, color 0.15s ease;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .site-nav a:hover {
+  color: #fff;
   border-bottom-color: var(--pink);
-  color: var(--teal-dark);
 }
 
 /* ---------- Hero ---------- */
