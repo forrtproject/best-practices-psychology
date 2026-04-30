@@ -479,15 +479,13 @@ strong { color: var(--teal-dark); }
 
 .person p {
   font-size: 0.875rem;
-  margin-bottom: 0;
+  margin: 0 0 0.45rem 0;
   line-height: 1.55;
   color: var(--text);
 }
 
-.person p br {
-  display: block;
-  content: "";
-  margin-top: 0.4rem;
+.person p:last-child {
+  margin-bottom: 0;
 }
 
 /* ---------- References ---------- */
