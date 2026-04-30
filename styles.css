@@ -484,6 +484,12 @@ strong { color: var(--teal-dark); }
   color: var(--text);
 }
 
+.person p br {
+  display: block;
+  content: "";
+  margin-top: 0.4rem;
+}
+
 /* ---------- References ---------- */
 .references {
   font-size: 0.9375rem;
