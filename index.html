@@ -6,7 +6,7 @@
 <title>Best-Practice Guidelines for Psychology</title>
 <meta name="description" content="A community-led project to develop consensus-based best-practice guidelines for open science in psychology.">
 <meta name="theme-color" content="#004055">
-<link rel="icon" type="image/svg+xml" href="pics/forrt-logo.svg">
+<link rel="icon" type="image/webp" href="pics/forrt-favicon.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -79,7 +79,7 @@
     <p>Specifically, we hope that the guidelines will be useful for the following groups:</p>
 
     <figure class="figure">
-      <img src="pics/stakeholders.png" alt="Diagram of stakeholder groups: psychological journals, researchers and institutions, funders, academic societies, and other disciplines">
+      <img src="pics/stakeholders.png" alt="Diagram of stakeholder groups: psychological journals, researchers and institutions, funders, academic societies, and other disciplines" class="zoomable" tabindex="0" role="button" aria-label="Click to enlarge diagram">
     </figure>
 
     <ul class="stakeholder-list">
@@ -95,7 +95,7 @@
     <h2>Action Plan &amp; Timeline</h2>
 
     <figure class="figure roadmap">
-      <img src="pics/roadmap.png" alt="Roadmap visualising the five project phases from April 2026 through December 2028">
+      <img src="pics/roadmap.png" alt="Roadmap visualising the five project phases from April 2026 through December 2028" class="zoomable" tabindex="0" role="button" aria-label="Click to enlarge roadmap">
     </figure>
 
     <p class="callout-link"><a href="#get-involved"><i class="fas fa-arrow-right"></i> <strong>How to get involved?</strong></a></p>
@@ -345,9 +345,49 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <p>&copy; 2026 Best-Practice Guidelines for Psychology Task Force. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC&nbsp;BY&nbsp;4.0</a>.</p>
-    <p>A community project supported by <a href="https://forrt.org" target="_blank" rel="noopener">FORRT</a>, the <a href="https://leibniz-psychology.org" target="_blank" rel="noopener">Leibniz Institute for Psychology (ZPID)</a>, and <a href="https://improvingpsych.org" target="_blank" rel="noopener">SIPS</a>.</p>
+    <p>A community project supported by <a href="https://forrt.org" target="_blank" rel="noopener">FORRT</a> and the <a href="https://leibniz-psychology.org" target="_blank" rel="noopener">Leibniz Institute for Psychology (ZPID)</a>.</p>
   </div>
 </footer>
 
+<!-- Lightbox overlay -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" style="display:none">
+  <button id="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+(function () {
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+  var lbClose = document.getElementById('lightbox-close');
+
+  function openLightbox(img) {
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+
+  function closeLightbox() {
+    lb.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('img.zoomable').forEach(function (img) {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function () { openLightbox(img); });
+    img.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(img); }
+    });
+  });
+
+  lbClose.addEventListener('click', closeLightbox);
+  lb.addEventListener('click', function (e) { if (e.target === lb) closeLightbox(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lb.style.display === 'flex') closeLightbox();
+  });
+})();
+</script>
 </body>
 </html>
