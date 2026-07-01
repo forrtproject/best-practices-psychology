@@ -488,6 +488,19 @@ strong { color: var(--teal-dark); }
   margin-bottom: 0;
 }
 
+.person-role {
+  display: inline-block;
+  margin: 0 auto 0.6rem;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  background: var(--cream-deep);
+  color: var(--teal);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 /* ---------- References ---------- */
 .references {
   font-size: 0.9375rem;
