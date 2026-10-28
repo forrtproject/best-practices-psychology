@@ -288,6 +288,58 @@ strong { color: var(--teal-dark); }
   color: var(--pink);
 }
 
+/* ---------- Newsletter sign-up ---------- */
+.newsletter {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--teal);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin: 0 0 2.5rem 0;
+}
+
+.newsletter-icon {
+  flex: 0 0 auto;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--cream-deep);
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.newsletter-body h3 { margin-top: 0; }
+
+.newsletter-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  margin: 1rem 0;
+}
+
+.newsletter-alt {
+  color: var(--teal);
+  font-size: 0.9375rem;
+}
+
+.newsletter-note {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+@media (max-width: 720px) {
+  .newsletter { flex-direction: column; }
+}
+
 /* ---------- Phases (collapsible) ---------- */
 .phases {
   display: flex;
