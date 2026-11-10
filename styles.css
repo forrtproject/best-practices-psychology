@@ -325,13 +325,9 @@ strong { color: var(--teal-dark); }
   margin: 1rem 0;
 }
 
-.newsletter-alt {
-  color: var(--teal);
-  font-size: 0.9375rem;
-}
-
 .newsletter-note {
   font-size: 0.875rem;
+  overflow-wrap: anywhere;
   color: var(--muted);
   margin-bottom: 0;
 }
